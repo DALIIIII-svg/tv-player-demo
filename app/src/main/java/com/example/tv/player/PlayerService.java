@@ -16,12 +16,14 @@ public class PlayerService {
 
     public void start() {
         Log.i(TAG, "Starting playback");
-        Config config = configRepository.load();
-        if (config == null) {
-            Log.i(TAG, "Falling back to default configuration");
-            config = Config.defaultConfig();
-        }
+        Config config = loadConfig();
         player.initialize(config.getUrl(), config.getBufferMs());
         player.play();
+    }
+
+    private Config loadConfig() {
+        Config config = configRepository.load();
+        Log.i(TAG, "Configuration loaded");
+        return config;
     }
 }
