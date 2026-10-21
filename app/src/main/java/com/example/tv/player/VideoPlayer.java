@@ -8,10 +8,10 @@ public class VideoPlayer {
 
     public void initialize(String url, int bufferMs) {
         this.url = url;
-        Log.i(TAG, "init url=" + url + " buffer=" + bufferMs);
+        Log.i(TAG, "Initializing player: url=" + url + ", bufferMs=" + bufferMs);
     }
 
     public void play() {
-        Log.i(TAG, "play " + url);
+        Log.i(TAG, "Playback started: " + url);
     }
 }
