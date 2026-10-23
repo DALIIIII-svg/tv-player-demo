@@ -8,7 +8,7 @@ public class NetworkConfig {
     }
 
     public static NetworkConfig defaults() {
-        return new NetworkConfig(10000);
+        return new NetworkConfig(2000);
     }
 
     public int getConnectTimeoutMs() { return connectTimeoutMs; }
